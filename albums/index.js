@@ -10,7 +10,9 @@
 // AppRegistry.registerComponent(appName, () => App);
 
 import React from 'react';
-import { Text, AppRegistry, StyleSheet, View } from 'react-native';
+import { AppRegistry, StyleSheet, View } from 'react-native';
+import Header from './src/components/Header.js';
+import AlbumList from './src/components/AlbumList.js';
 
 // Create registerComponen
 
@@ -18,16 +20,19 @@ import { Text, AppRegistry, StyleSheet, View } from 'react-native';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>some text</Text>
+      <Header headerText={'Albums'} />
+      <AlbumList />
     </View>
   );
 };
 
+// Passing property ( props )
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    //justifyContent: 'center',
+    //alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
